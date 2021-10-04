@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700&display=swap');
+@import 'variaveis';
+@import 'modal';
+@import 'global';
+
+body{
+    @include bg-gradient;
+    font-family: 'Yantramanav', sans-serif;
+    header{
+        background: transparent radial-gradient(closest-side at 96% 11%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+        height: 100vh;
+        .menu{
+            padding: 10px 10px 0;
+            img{
+                &:nth-child(1){
+                    width: 115px;
+                    height: 95px;
+                    display: none;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+            }
+        }
+        .header-content{
+            margin: 20px auto;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 90%;
+            h1{
+                color: $white;
+                font-weight: 300;
+                text-align: center;
+                font-size: $font-h1-mobile;
+                line-height: 52px;
+                text-transform: capitalize;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            p{
+                color: $gray-200;
+                font-size: $body-1-mobile;
+                line-height: 26px;
+                text-align: center;
+                margin: 5px auto 40px;
+                width: 90%;
+            }
+        }
+    }
+    main{
+        span{
+            border: 1px solid $orange;
+            border-top: none;
+            display: inline-block;
+            margin-bottom: 5px;
+            position: relative;
+            width: 105px;
+            height: 110px;
+            p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+        h3, span p{
+            font-size: $font-h2;
+            color:  $white;
+            font-weight: 500;
+            line-height: 45px;
+            
+        }
+        
+        h3, p{
+            margin-left: 15px;
+        }
+
+        strong{
+            color: $gray-200;
+            font-size: $body-1-mobile;
+            margin: 25px 0 10px 15px;
+            display: inline-block;
+        }
+        p{
+            color: $white;
+            font-weight: 100;
+            line-height: 26px;
+            font-size: $body-1-mobile;
+        }
+        .about-cards{
+            .card{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 80%;
+                border: 1px solid $gray-200;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 40px auto 20px;
+                img{
+                    margin:15px 0 25px;
+                }
+                h4{
+                    color: $orange;
+                    font-size: $subtitle-3;
+                    letter-spacing: 2px;
+                    margin-bottom: 7px;
+                }
+                p{
+                    color: $gray-200;
+                    font-weight: 500;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    article{
+        background: url('../assets/img/group34.svg');
+        backdrop-filter: opacity(.1);
+        width: 100%;
+        padding: 44px 0 0; 
+        margin: 56px 0 0;
+        h3, p{
+            font-size: $font-h1-mobile; 
+            text-align: center;
+            padding: 0 15px;
+            color: $white;
+            font-weight: 500;
+        }
+        p{
+            margin: 0 0 44px;
+        }
+        .curso-value {
+            background: $orange;
+            padding: 45px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h2{
+                margin: 0 0 24px;
+                font-size: 48px;
+                color: $white;
+                font-weight: 500;
+                line-height: 62px;
+                letter-spacing: 1.01px;
+            }
+            button{
+                background: $white;
+                color: $orange;
+                border-radius: 5px;
+                width: 203px;
+                height: 56px;
+                margin: 0 0 62px;
+                border: none;
+                font-weight: 700;
+                font-size: $body-2;
+            }
+        }
+    }
+    .about-studies{
+        background: url('../assets/img/teacherbnw.png');
+        background : {
+            repeat: no-repeat;
+            size: cover;
+            attachment: fixed;
+        }
+
+        h3{
+            margin-left: 14px;
+            color: $white;
+            font-size: $font-h2;
+            font-weight: 500;
+            line-height: 62px;
+            letter-spacing: 1.01px;
+            span{
+                border-top: none;
+                padding: 50px 0 5px 5px;
+                display: inline-block;
+            }
+        }
+        padding-bottom: 50px;
+        .accordion{
+            margin: 35px 0;
+            .competence{
+                cursor: pointer;
+                header{
+                    background: $gray-500;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 15px;
+                    height: 80px;
+                    p{
+                        color: $white;
+                        font-size: $body-1;
+                        font-weight: 100;
+                    }
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                &:hover{
+                    filter: brightness(0.9);
+                }
+            }
+            .about-competence-desktop{
+                display: none;
+            }
+            .about-competence {
+                background: #262626;
+                border-top: 1px solid $orange;
+                border-bottom: 1px solid $orange;
+                height: 300px;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 15px;
+                transition: all .6s ease-in-out;
+                p{
+                    font-size: 18px;
+                    color: $white;
+                    line-height: 31px;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .about-display{
+                display: flex;
+            }
+        }   
+    }
+    .our-teachers{
+        background: #0C0C0C;
+        padding-bottom: 30px;
+        .title{
+            width: 110px;
+            height: 105px;
+            border: 1px solid $orange;
+            border-top: none;
+            position: relative;
+            margin: 0 0 70px 30px;
+            h3{
+                position: absolute;
+                font-size: 48px;
+                line-height: 62px;
+                letter-spacing: 1.01px;
+                top: 50px;
+                left: 10px;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+        .teacher{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 24px;
+            border: 1px solid $gray-500;
+            border-radius: 5px;
+            margin: 25px 0;
+            h4{
+                color: $orange;
+                align-self: start;
+                margin: 31px 0 11px;
+                letter-spacing: 2px;
+                line-height: 18px;
+                font-size: $subtitle-3;
+            }
+            p{
+                color: $gray-200;
+                font-size: $body-2;
+                line-height: 26px;
+                font-weight: 700;
+            }
+        }
+        .desktop-teacher{
+            display: none;
+        }
+    }
+
+    .depoimentos{
+        height: 100vh;
+        position: relative;
+        .slick-prev, .slick-next{
+            visibility: hidden;
+        }
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            .slick-active{
+                animation: active ease-in .2s;
+                &::before{
+                    content: '';
+                    width: 30px;
+                    height: 10px;
+                    border-radius: 5px;
+                    background: $white;
+                    position: absolute;
+                    top: 100%;
+                    transform: translate(0, -50%);
+                    z-index: 2;
+                }
+            }
+            @keyframes active{
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            li{
+                list-style: none;
+                button{
+                    background: none;
+                    border: none;
+                    color: transparent;
+                    position: relative;
+                    width: 40px;
+                    height: 40px;
+                    &::after{
+                        content: '+';
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #707070;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .depoimento{
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            background: url('../assets/img/opinion.png');
+            background : {
+                repeat: no-repeat;
+                size: cover;
+                position: center;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .about-depoiment {
+                display: flex;
+                flex-direction: column;
+                height: 60%;
+                width: 85%;
+                align-items: center;
+                justify-content: center;
+                h3{
+                    color: $white;
+                    font-size: $font-h1-mobile;
+                    text-align: center;
+                    letter-spacing: 0.85px;
+                    line-height: 52px;
+                }
+                p{
+                    color: $orange;
+                    font-size: $body-1;
+                    letter-spacing: 2.57px;
+                    line-height: 23px;
+                    align-self: center;
+                    width: 100%;
+                    margin-top: 25px;
+                    text-align: center;
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .learn{
+        @include bg-gradient;
+        padding-bottom: 56px;
+        .learn-capacity{
+            .about-capacity{
+                h3, span p{
+                    color: $white;
+                    font-size: $font-h2;
+                    font-weight: 400;
+                    line-height: 62px;
+                    letter-spacing: 1.01px;   
+                }
+                h3{
+                    margin-left: 5px;
+                }
+                span{
+                    border: 1px solid $orange;
+                    border-top: none;
+                    width: 110px;
+                    height: 105px;
+                    position: relative;
+                    display: block;
+                    p{
+                        position: absolute;
+                        top: 40%;
+                        left: 5px;
+                    }
+                }
+                p{
+                    color: $gray-200;
+                    font-weight: 400;
+                    font-size: $body-1-mobile;
+                    line-height: 26px;
+                }
+                .subtitle{
+                    font-weight: 700;
+                }
+            }
+            .metodologias {
+                margin: 50px 0 50px 35px;
+                h4{
+                    color: $orange;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                    font-size: $subtitle-3;
+                    position: relative;
+                    margin: 32px 0 0;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        border: 1px solid $orange;
+                        border-radius: 50%;
+                        left: -10%;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+                p{
+                    font-size: $body-2;
+                    font-weight: 700;
+                    color: $gray-200;
+                }
+            }
+        }
+    }
+
+    .apitude {
+        padding-bottom: 70px;
+        background: url('../assets/img/negociando.png');
+        background: {
+            size: cover;
+            position: center;
+            repeat: no-repeat
+        }
+        span{
+            border: 1px solid $orange;
+            border-top: none;
+            width: 110px;
+            height: 105px;
+            position: relative;
+            display: block;
+            h3{
+                position: absolute;
+                top: 40%;
+                left: 5px;
+                width: 170px;
+                margin: 0;
+            }
+        }
+        h3{
+            color: $white;
+            font-size: $font-h2;
+            margin-left: 5px;
+            font-weight: 400;
+        }
+        p{
+            color: $gray-200;
+            font-weight: 400;
+            font-size: $body-1-mobile;
+            line-height: 26px;
+            margin: 0 0 52px;
+        }
+        .subtitle{
+            font-weight: 700;
+            margin: 14px 0 0;
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #0C0C0C;
+        padding:16px 0 39px;
+        small, p{
+            font-size: $body-1-mobile;
+            font-weight: 700;
+            margin: 22px 0;
+            color: $gray-200;
+        }
+    }
+}

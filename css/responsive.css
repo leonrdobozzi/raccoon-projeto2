@@ -1,0 +1,333 @@
+@media screen and (min-width: 992px) {
+  .buttons {
+    flex-direction: row;
+  }
+  .buttons button {
+    margin: 0 12px;
+  }
+
+  .desktop-buttons {
+    display: flex;
+  }
+
+  .mobile-buttons {
+    display: none;
+  }
+
+  body header .menu img:nth-child(1) {
+    width: 115px;
+    height: 95px;
+    display: block;
+  }
+  body header .menu img:nth-child(2) {
+    display: none;
+  }
+  body header .header-content {
+    margin: 0 auto;
+    height: 80%;
+  }
+  body header .header-content h1 {
+    font-size: 54px;
+    letter-spacing: 1.13px;
+    line-height: 70px;
+    margin: 17px 0;
+    font-weight: 400;
+  }
+  body header .header-content p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  body main {
+    display: flex;
+    justify-content: center;
+  }
+  body main .about-business {
+    width: 500px;
+    margin-right: 10px;
+  }
+  body main .about-business span {
+    width: 170px;
+    height: 150px;
+  }
+  body main .about-business span p {
+    font-size: 64px;
+    top: 60%;
+    left: 105px;
+  }
+  body main .about-business h3 {
+    font-size: 64px;
+    margin: 0 0 50px 60px;
+  }
+  body main .about-business strong, body main .about-business p:nth-child(4) {
+    margin-left: 70px;
+    font-size: 18px;
+    width: 400px;
+  }
+  body main .about-business p:nth-child(4) {
+    margin-bottom: 95px;
+  }
+  body main .about-business .buttons button:nth-child(2) {
+    position: relative;
+  }
+  body main .about-business .buttons button:nth-child(2)::after {
+    content: "R$ 5.000,00";
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    color: #B5B5B5;
+  }
+  body main .about-cards {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 0 0;
+    align-items: center;
+  }
+  body main .about-cards .card {
+    width: 40%;
+    margin: 10px 20px;
+  }
+  body article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+  body article .text-about {
+    margin: 0;
+    width: 60%;
+  }
+  body article .curso-value {
+    width: 40%;
+  }
+  body .about-studies {
+    padding-top: 40px;
+  }
+  body .about-studies h3 {
+    display: none;
+  }
+  body .about-studies .accordion {
+    display: flex;
+    justify-content: center;
+  }
+  body .about-studies .accordion .competences {
+    width: 30%;
+  }
+  body .about-studies .accordion .competences .competence {
+    display: flex;
+  }
+  body .about-studies .accordion .competences .competence header {
+    width: 100%;
+    justify-content: center;
+  }
+  body .about-studies .accordion .competences .competence header img {
+    display: none;
+  }
+  body .about-studies .accordion .competences .competence header p {
+    font-size: 32px;
+  }
+  body .about-studies .accordion .competences .competence .about-competence {
+    display: none;
+  }
+  body .about-studies .accordion .competences .opened header {
+    position: relative;
+  }
+  body .about-studies .accordion .competences .opened header p {
+    font-weight: 500;
+  }
+  body .about-studies .accordion .competences .opened header::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 2px;
+    background: #F89D24;
+    bottom: 0;
+    right: 0;
+  }
+  body .about-studies .accordion .about-competence-desktop {
+    width: 50%;
+    background: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .about-studies .accordion .about-competence-desktop p {
+    color: #B5B5B5;
+    font-size: 18px;
+    font-weight: 300;
+    width: 60%;
+  }
+  body .about-studies .accordion .about-competence-desktop p span {
+    color: #FFFFFF;
+    font-weight: 700;
+  }
+  body .about-studies .accordion .about-competence-desktop .buttons-competence {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  body .about-studies .accordion .about-competence-desktop .buttons-competence a {
+    color: #F89D24;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 12px 14.5px 0;
+  }
+  body .about-studies .accordion .about-competence-desktop .buttons-competence a:nth-child(1) {
+    color: #FFFFFF;
+  }
+  body .about-studies .accordion .about-competence-desktop .buttons-competence a:nth-child(2) {
+    margin-right: 0;
+  }
+  body .our-teachers {
+    padding-bottom: 45px;
+  }
+  body .our-teachers .title {
+    margin: 0 0 70px 150px;
+    width: 180px;
+    height: 175px;
+  }
+  body .our-teachers .title h3 {
+    left: 60px;
+  }
+  body .our-teachers .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .our-teachers .container .teacher {
+    width: 30%;
+    margin: 50px 14px;
+  }
+  body .our-teachers .container .desktop-teacher {
+    display: flex;
+  }
+  body .depoimentos .slick-prev, body .depoimentos .slick-next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translate(0, -50%);
+    visibility: visible;
+    background: none;
+    border: none;
+    color: transparent;
+  }
+  body .depoimentos .slick-next {
+    right: 0;
+  }
+  body .depoimentos .slick-next::after,
+body .depoimentos .slick-prev::after {
+    content: "";
+    background: url("../assets/icons/arrow-carousel.svg");
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transform: translate(0, -50%);
+  }
+  body .depoimentos .slick-prev::after {
+    left: 5px;
+    transform: rotate(180deg) translate(0, 50%);
+  }
+  body .depoimentos .depoimento {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    background: url("../assets/img/opinion.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .depoimentos .depoimento .about-depoiment h3 {
+    font-size: 54px;
+    letter-spacing: 1.13px;
+    line-height: 70px;
+  }
+  body .depoimentos .depoimento .about-depoiment p {
+    color: #F89D24;
+    font-size: 24px;
+    letter-spacing: 3.43px;
+    line-height: 32px;
+    align-self: flex-end;
+    width: 40%;
+    text-align: end;
+  }
+  body .learn .learn-capacity {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .learn .learn-capacity .about-capacity p {
+    width: 337px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 67px 45px;
+  }
+  body .learn .learn-capacity .about-capacity .subtitle {
+    margin: 20px 0 0 45px;
+  }
+  body .learn .learn-capacity .about-capacity .desktop-buttons {
+    justify-content: flex-start;
+    margin-left: 40px;
+  }
+  body .learn .learn-capacity .about-capacity span {
+    width: 160px;
+    height: 155px;
+  }
+  body .learn .learn-capacity .about-capacity span p {
+    left: 45px;
+    top: 60%;
+    margin: 0;
+  }
+  body .learn .learn-capacity .about-capacity h3 {
+    margin-left: 45px;
+  }
+  body .learn .metodologias h4 {
+    line-height: 26px;
+    position: relative;
+    margin: 32px 0 0;
+  }
+  body .learn .metodologias p {
+    width: 90%;
+  }
+  body .apitude {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 250px;
+    height: 768px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  body .apitude .apitude-info {
+    width: 45%;
+    margin: 0;
+  }
+  body .apitude .apitude-info span {
+    width: 200px;
+    height: 205px;
+    margin-left: 200px;
+  }
+  body .apitude .apitude-info span h3 {
+    font-size: 64px;
+    width: 250px;
+    top: 65%;
+    left: -100%;
+  }
+  body .apitude .apitude-info h3 {
+    font-size: 64px;
+  }
+  body .apitude .apitude-info p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body main .about-business {
+    margin-right: 68px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

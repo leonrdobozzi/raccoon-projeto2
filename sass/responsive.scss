@@ -1,0 +1,375 @@
+@import 'variaveis.scss';
+
+@media screen and (min-width: 520px){}
+@media screen and (min-width: 768px){}
+@media screen and (min-width: 992px){
+    .buttons {
+        flex-direction: row;
+        button{
+            margin: 0 12px;
+        }
+    }
+    
+    .desktop-buttons {
+        display: flex;
+    }
+
+    .mobile-buttons{
+        display: none;
+    }
+
+    body{
+        header{
+            .menu{
+                img{
+                    &:nth-child(1){
+                        width: 115px;
+                        height: 95px;
+                        display: block;
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                }
+            }
+            .header-content{
+                margin: 0 auto;
+                height: 80%;
+                h1{
+                    font-size: $font-h1;
+                    letter-spacing: 1.13px;
+                    line-height: 70px;
+                    margin: 17px 0;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: $body-1;
+                    line-height: 26px;
+                }
+            }
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            .about-business{
+                width: 500px;
+                margin-right: 10px;
+                span {
+                    width: 170px;
+                    height: 150px;
+                    p{
+                        font-size: 64px;
+                        top: 60%;
+                        left: 105px;
+                    }
+                }
+                h3{
+                    font-size: 64px;
+                    margin: 0 0 50px 60px;
+                }
+                strong, p:nth-child(4) {
+                    margin-left: 70px;
+                    font-size: $body-1;
+                    width: 400px;
+                }
+
+                p:nth-child(4) {
+                    margin-bottom: 95px;
+                }
+
+                .buttons{
+                    button{
+                        &:nth-child(2){
+                            position: relative;
+                            &::after{
+                                content: "R$ 5.000,00";
+                                position: absolute;
+                                top: -50%;
+                                left: 0%;
+                                color: $gray-200;
+                            }
+                        }
+                    }
+                }
+            }
+            .about-cards {
+                width: 600px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 80px 0 0;
+                align-items: center;
+                .card{
+                    width: 40%;
+                    margin: 10px 20px;
+                }
+            }
+        }
+        article{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 0;
+            .text-about {
+                margin: 0;
+                width: 60%;
+            }
+            .curso-value{
+                width: 40%;
+            }
+        }
+        .about-studies{
+            padding-top: 40px;
+            h3{
+                display: none;
+            }
+            .accordion{
+                display: flex;
+                justify-content: center;
+                .competences{
+                    width: 30%;
+                    .competence{
+                        display: flex;
+                        header{
+                            width: 100%;
+                            justify-content: center;
+                            img{
+                                display: none;
+                            }
+                            p{
+                                font-size: $font-h3;
+                            }
+                        }
+                        .about-competence{
+                            display: none;
+                        }
+                    }
+                    .opened{
+                        header{
+                            position: relative;
+                            p{
+                                font-weight: 500;
+                            } 
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 75%;
+                                height: 2px;
+                                background: $orange;
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+                .about-competence-desktop{
+                    width: 50%;
+                    background: #262626;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        color: $gray-200;
+                        font-size: $body-1;
+                        font-weight: 300;
+                        width: 60%;
+                        span{
+                            color: $white;
+                            font-weight: 700;
+                        }
+                    }
+                    .buttons-competence{
+                        width: 60%;
+                        display: flex;
+                        justify-content: flex-end;
+                        a{
+                            color: $orange;
+                            text-decoration: none;
+                            letter-spacing: 2px;
+                            margin: 12px 14.5px 0;
+                            &:nth-child(1){
+                                color: $white;
+                            }
+                            &:nth-child(2){
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .our-teachers {
+            padding-bottom: 45px;
+            .title{
+                margin: 0 0 70px 150px;
+                width: 180px;
+                height: 175px;
+                h3 {
+                    left: 60px;
+                }
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                .teacher {
+                    width: 30%;
+                    margin: 50px 14px;
+                }
+                .desktop-teacher{
+                    display: flex;
+                }
+            }
+        }
+        .depoimentos{
+            .slick-prev, .slick-next{
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                transform: translate(0, -50%);
+                visibility: visible;
+                background: none;
+                border: none;
+                color: transparent;
+            }
+
+            .slick-next{
+                right: 0;
+            }
+            .slick-next::after,
+            .slick-prev::after{
+                content: "";
+                background: url('../assets/icons/arrow-carousel.svg');
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                left: -50px;
+                transform: translate(0, -50%);
+            }
+
+            .slick-prev::after{
+                left: 5px;
+                transform: rotate(180deg) translate(0, 50%);
+            }
+
+            .depoimento{
+                overflow: hidden;
+                position: relative;
+                height: 100vh;
+                background: url('../assets/img/opinion.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .about-depoiment {
+                    h3{
+                        font-size: $font-h1;
+                        letter-spacing: 1.13px;
+                        line-height: 70px;
+                    }
+                    p{
+                        color: $orange;
+                        font-size: $subtitle-2;
+                        letter-spacing: 3.43px;
+                        line-height: 32px;
+                        align-self: flex-end;
+                        width: 40%;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+        .learn{
+            .learn-capacity {
+                display: flex;
+                justify-content: space-between;
+                .about-capacity {
+                    p{
+                        width: 337px;
+                        font-size: $body-1;
+                        line-height: 26px;
+                        margin: 0 0 67px 45px;
+    
+                    }
+                    
+                    .subtitle{
+                        margin: 20px 0 0 45px;
+                    }
+                    .desktop-buttons {
+                        justify-content: flex-start;
+                        margin-left: 40px;
+    
+                    }
+                    span{
+                        width: 160px;
+                        height: 155px;
+                        p{
+                            left: 45px;
+                            top: 60%;
+                            margin: 0;
+                        }
+                    }
+                    h3{
+                        margin-left: 45px;
+                    }
+                    
+                }
+        }
+        
+            .metodologias {
+                h4{
+                    line-height: 26px;
+                    position: relative;
+                    margin: 32px 0 0;
+                }
+                p{
+                    width: 90%;
+                }
+            }
+        }
+        .apitude{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0 250px;
+            height: 768px;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            background-position: center;
+
+            .apitude-info{
+                width: 45%;
+                margin: 0;
+                span {
+                    width: 200px;
+                    height: 205px;
+                    margin-left: 200px;
+                    h3{
+                        font-size: 64px;
+                        width: 250px;
+                        top: 65%;
+                        left: -100%;
+                    }
+                }
+                h3{
+                    font-size: 64px;
+                }
+
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1100px){
+    body{
+        main{
+            .about-business{
+                margin-right: 68px;
+            }
+        }
+    }
+}

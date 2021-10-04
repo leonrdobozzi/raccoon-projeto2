@@ -1,0 +1,26 @@
+//Variaveis
+$yellow: #FEC024;
+$orange: #F89D24;
+$black: #191919;
+$gray-200: #B5B5B5;
+$gray-500: #686868;
+$white: #FFFFFF;
+
+$font-h1: 54px;
+$font-h1-mobile: 40.5px;
+$font-h2: 46px;
+$font-h3: 32px;
+$font-h4: 24px;
+
+$subtitle-1: 32px;
+$subtitle-2: 24px;
+$subtitle-3: 14px;
+
+$body-1: 18px;
+$body-1-mobile: 13.5px;
+$body-2: 16px;
+
+@mixin bg-gradient {
+    background: rgb(44,44,44);
+    background: radial-gradient(circle, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 0%, rgba(26,26,26,1) 100%);
+}

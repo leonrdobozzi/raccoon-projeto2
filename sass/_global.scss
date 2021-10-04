@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+//App - Estilos globais
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button{
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    button {
+        color: $white;
+        background: $orange;
+        width: 169px;
+        height: 56px;
+        border-radius: 5px;
+        margin: 15px 0;
+        border: none;
+        font-weight: bold;
+        line-height: 26px;
+        &:nth-child(1){
+            background: none;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.desktop-buttons {
+    display: none;
+}
+
+.mobile-buttons{
+    display: flex;
+}
+
+//Fim dos estilos globais
