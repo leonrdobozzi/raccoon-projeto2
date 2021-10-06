@@ -1,7 +1,5 @@
 @import 'variaveis.scss';
 
-@media screen and (min-width: 520px){}
-@media screen and (min-width: 768px){}
 @media screen and (min-width: 992px){
     .buttons {
         flex-direction: row;
@@ -179,19 +177,24 @@
                         }
                     }
                     .buttons-competence{
-                        width: 60%;
+                        width: 80%;
                         display: flex;
                         justify-content: flex-end;
                         a{
+                            cursor: pointer;
                             color: $orange;
                             text-decoration: none;
                             letter-spacing: 2px;
                             margin: 12px 14.5px 0;
+                            font-size: $body-2;
                             &:nth-child(1){
                                 color: $white;
                             }
                             &:nth-child(2){
                                 margin-right: 0;
+                            }
+                            &:hover{
+                                filter: brightness(0.8)
                             }
                         }
                     }

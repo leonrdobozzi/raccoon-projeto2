@@ -163,21 +163,26 @@
     font-weight: 700;
   }
   body .about-studies .accordion .about-competence-desktop .buttons-competence {
-    width: 60%;
+    width: 80%;
     display: flex;
     justify-content: flex-end;
   }
   body .about-studies .accordion .about-competence-desktop .buttons-competence a {
+    cursor: pointer;
     color: #F89D24;
     text-decoration: none;
     letter-spacing: 2px;
     margin: 12px 14.5px 0;
+    font-size: 16px;
   }
   body .about-studies .accordion .about-competence-desktop .buttons-competence a:nth-child(1) {
     color: #FFFFFF;
   }
   body .about-studies .accordion .about-competence-desktop .buttons-competence a:nth-child(2) {
     margin-right: 0;
+  }
+  body .about-studies .accordion .about-competence-desktop .buttons-competence a:hover {
+    filter: brightness(0.8);
   }
   body .our-teachers {
     padding-bottom: 45px;

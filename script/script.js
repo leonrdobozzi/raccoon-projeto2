@@ -1,7 +1,7 @@
+//Modal
 const buttonCloseModal = document.querySelector('.close-modal');
 const modal = document.querySelector('.modal-cadastro');
 const buttonOpenModal = document.querySelectorAll('.button-open-modal');
-
 function toggleModal(){
     modal.classList.toggle('modal-open');
 };
@@ -16,8 +16,13 @@ buttonOpenModal.forEach(button => {
     });
 });
 
+//Mascaras
 const cpf = document.getElementById('cpf');
 function maskCPF(){
+    if(isNaN(cpf.value)){
+        let newValue =  cpf.value.replace(/[A-z]/g, '');
+        cpf.value = newValue;
+    }
     if(cpf.value.length == 3 || cpf.value.length == 7){
         cpf.value += '.'
     }else if(cpf.value.length == 11){
@@ -41,12 +46,13 @@ sendform.addEventListener('click', e => {
         document.getElementById('check-terms').style.color = "#ff0054";
         e.preventDefault()
     }
-})
+});
 
 check.addEventListener('click', () => {
     document.getElementById('check-terms').style.color = "white";
-})
+});
 
+//Accordion
 const competences = document.querySelectorAll('.competence');
 const aboutCompetences = document.querySelectorAll('.about-competence');
 const arrowCompetence = document.querySelectorAll('.arrow-competence');
@@ -63,16 +69,15 @@ competences.forEach(competenceContainer => {
                     }else{
                         
                     }
-                })
+                });
             }else if(!competence.parentElement.classList.contains('opened')){
                 competence.classList.remove('about-display');
                 arrowCompetence.forEach(arrow => {
                     if(!arrow.parentNode.parentElement.classList.contains('opened')){
                         arrow.style.transform = 'rotate(0deg)';
                     }
-                })
-            }
-        })
-        
-    })
-})
+                });
+            };
+        });
+    });
+});
