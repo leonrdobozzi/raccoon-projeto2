@@ -22,5 +22,5 @@ $body-2: 16px;
 
 @mixin bg-gradient {
     background: rgb(44,44,44);
-    background: radial-gradient(circle, rgba(44,44,44,1) 0%, rgba(44,44,44,1) 0%, rgba(26,26,26,1) 100%);
+    background: radial-gradient(closest-side at 100% 50%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
 }

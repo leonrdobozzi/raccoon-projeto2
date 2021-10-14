@@ -5,31 +5,31 @@
 
 body{
     @include bg-gradient;
+    background: transparent radial-gradient(#2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+    background-attachment: fixed;
     font-family: 'Yantramanav', sans-serif;
     header{
-        background: transparent radial-gradient(closest-side at 96% 11%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
-        height: 100vh;
-        .menu{
-            padding: 10px 10px 0;
-            img{
-                &:nth-child(1){
-                    width: 115px;
-                    height: 95px;
-                    display: none;
-                }
-                &:nth-child(2){
-                    display: block;
-                }
+        height: 10vh;
+        padding: 10px 10px 0;
+        img{
+            &:nth-child(1){
+                width: 115px;
+                height: 95px;
+                display: none;
+            }
+            &:nth-child(2){
+                display: block;
             }
         }
+    }
         .header-content{
             margin: 20px auto;
             max-width: 900px;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 90%;
             h1{
                 color: $white;
                 font-weight: 300;
@@ -50,8 +50,9 @@ body{
                 width: 90%;
             }
         }
-    }
+    
     main{
+        @include bg-gradient;
         span{
             border: 1px solid $orange;
             border-top: none;
@@ -67,7 +68,7 @@ body{
                 transform: translate(-50%, 0);
             }
         }
-        h3, span p{
+        h2, span p{
             font-size: $font-h2;
             color:  $white;
             font-weight: 500;
@@ -75,8 +76,12 @@ body{
             
         }
         
-        h3, p{
+        p{
             margin-left: 15px;
+        }
+
+        h2{
+            margin-left: 25px;
         }
 
         strong{
@@ -105,11 +110,12 @@ body{
                 img{
                     margin:15px 0 25px;
                 }
-                h4{
+                h3{
                     color: $orange;
                     font-size: $subtitle-3;
                     letter-spacing: 2px;
                     margin-bottom: 7px;
+                    margin-left: 15px;
                 }
                 p{
                     color: $gray-200;
@@ -119,7 +125,7 @@ body{
             }
         }
     }
-    article{
+    .course-price{
         background: url('../assets/img/group34.svg');
         backdrop-filter: opacity(.1);
         width: 100%;
@@ -187,9 +193,12 @@ body{
         padding-bottom: 50px;
         .accordion{
             margin: 35px 0;
+            #competences-desktop {
+                display: none;
+            }
             .competence{
                 cursor: pointer;
-                header{
+                section{
                     background: $gray-500;
                     align-items: center;
                     display: flex;

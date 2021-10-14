@@ -14,90 +14,90 @@
     display: none;
   }
 
-  body header .menu img:nth-child(1) {
+  body header img:nth-child(1) {
     width: 115px;
     height: 95px;
     display: block;
   }
-  body header .menu img:nth-child(2) {
+  body header img:nth-child(2) {
     display: none;
   }
-  body header .header-content {
+  body .header-content {
     margin: 0 auto;
-    height: 80%;
   }
-  body header .header-content h1 {
+  body .header-content h1 {
     font-size: 54px;
     letter-spacing: 1.13px;
     line-height: 70px;
     margin: 17px 0;
     font-weight: 400;
   }
-  body header .header-content p {
+  body .header-content p {
     font-size: 18px;
     line-height: 26px;
   }
-  body main {
+  body main .container {
     display: flex;
     justify-content: center;
   }
-  body main .about-business {
+  body main .container .about-business {
     width: 500px;
     margin-right: 10px;
   }
-  body main .about-business span {
+  body main .container .about-business span {
     width: 170px;
     height: 150px;
   }
-  body main .about-business span p {
+  body main .container .about-business span p {
     font-size: 64px;
     top: 60%;
     left: 105px;
   }
-  body main .about-business h3 {
+  body main .container .about-business h2 {
     font-size: 64px;
     margin: 0 0 50px 60px;
   }
-  body main .about-business strong, body main .about-business p:nth-child(4) {
+  body main .container .about-business strong, body main .container .about-business p:nth-child(4) {
     margin-left: 70px;
     font-size: 18px;
     width: 400px;
   }
-  body main .about-business p:nth-child(4) {
+  body main .container .about-business p:nth-child(4) {
     margin-bottom: 95px;
   }
-  body main .about-business .buttons button:nth-child(2) {
+  body main .container .about-business .buttons button:nth-child(2) {
     position: relative;
   }
-  body main .about-business .buttons button:nth-child(2)::after {
+  body main .container .about-business .buttons button:nth-child(2)::after {
     content: "R$ 5.000,00";
     position: absolute;
     top: -50%;
     left: 0%;
     color: #B5B5B5;
   }
-  body main .about-cards {
+  body main .container .about-cards {
     width: 600px;
     display: flex;
     flex-wrap: wrap;
     margin: 80px 0 0;
     align-items: center;
   }
-  body main .about-cards .card {
+  body main .container .about-cards .card {
     width: 40%;
     margin: 10px 20px;
   }
-  body article {
+  body .course-price {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 22px 0;
+    margin: 0;
   }
-  body article .text-about {
+  body .course-price .text-about {
     margin: 0;
     width: 60%;
   }
-  body article .curso-value {
+  body .course-price .curso-value {
     width: 40%;
   }
   body .about-studies {
@@ -108,41 +108,50 @@
   }
   body .about-studies .accordion {
     display: flex;
-    justify-content: center;
   }
   body .about-studies .accordion .competences {
-    width: 30%;
+    display: none;
   }
-  body .about-studies .accordion .competences .competence {
+  body .about-studies .accordion #competences-desktop {
     display: flex;
+    flex-direction: column;
   }
-  body .about-studies .accordion .competences .competence header {
-    width: 100%;
+  body .about-studies .accordion #competences-desktop input[type=radio] {
+    display: none;
+  }
+  body .about-studies .accordion #competences-desktop label {
+    cursor: pointer;
+    background: #686868;
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    height: 80px;
+    width: 400px;
+    font-size: 32px;
+    letter-spacing: 0.67px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
-  body .about-studies .accordion .competences .competence header img {
-    display: none;
+  body .about-studies .accordion #competences-desktop label:hover {
+    filter: brightness(0.8);
   }
-  body .about-studies .accordion .competences .competence header p {
-    font-size: 32px;
-  }
-  body .about-studies .accordion .competences .competence .about-competence {
-    display: none;
-  }
-  body .about-studies .accordion .competences .opened header {
+  body .about-studies .accordion #competences-desktop .checked {
     position: relative;
-  }
-  body .about-studies .accordion .competences .opened header p {
+    width: 100%;
     font-weight: 500;
   }
-  body .about-studies .accordion .competences .opened header::before {
+  body .about-studies .accordion #competences-desktop .checked::before {
     content: "";
     position: absolute;
     width: 75%;
     height: 2px;
     background: #F89D24;
-    bottom: 0;
     right: 0;
+    bottom: 0;
   }
   body .about-studies .accordion .about-competence-desktop {
     width: 50%;

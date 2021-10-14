@@ -41,7 +41,24 @@ const check = document.getElementById('check');
 
 sendform.addEventListener('click', e => {
     if(check.checked){
-        return;
+        const inputEmail = document.getElementById('email').value;
+        const inputName = document.getElementById('name').value;
+        const inputCpf = document.getElementById('cpf').value;
+        const inputTellphone = document.getElementById('tellphone').value;
+        const check = check.checked;
+        let dados = {
+            email: inputEmail,
+            name: inputName,
+            cpf: inputCpf,
+            tellphone: inputTellphone,
+            check
+        }
+        fetch('', {
+            method: 'POST',
+            body: JSON.stringify(dados)
+        }).then(() => {
+            alert("Enviado com sucesso!")
+        });
     }else{
         document.getElementById('check-terms').style.color = "#ff0054";
         e.preventDefault()
@@ -81,3 +98,29 @@ competences.forEach(competenceContainer => {
         });
     });
 });
+
+
+const competenceDesktop = document.querySelectorAll('input[name="competence"]');
+
+competenceDesktop.forEach(input => {
+  input.addEventListener('click', () => {
+    document.querySelectorAll('label').forEach(label => {
+      if(label.classList == input.id){
+        label.classList.add('checked')
+        const text = document.querySelector('.about-text');
+        if(label.classList.contains('competence-1')){
+          text.innerText = 'Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso.';
+        }else if(label.classList.contains('competence-2')){
+          text.innerText = 'Esta seção visa explicar as competências para se fazer o curso.';
+        }else if(label.classList.contains('competence-3')){
+          text.innerText = 'Esta seção visa explicar as competências da empresa com o curso.';
+        }else if(label.classList.contains('competence-4')){
+          text.innerText = 'Esta seção visa explicar as competências com o mercado de trabalho.';
+        }
+      }else{
+        label.classList.remove('checked')
+      }
+    })
+  })
+})
+

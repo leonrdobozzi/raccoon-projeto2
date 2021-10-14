@@ -18,95 +18,95 @@
 
     body{
         header{
-            .menu{
-                img{
-                    &:nth-child(1){
-                        width: 115px;
-                        height: 95px;
-                        display: block;
-                    }
-                    &:nth-child(2){
-                        display: none;
-                    }
+            img{
+                &:nth-child(1){
+                    width: 115px;
+                    height: 95px;
+                    display: block;
                 }
-            }
-            .header-content{
-                margin: 0 auto;
-                height: 80%;
-                h1{
-                    font-size: $font-h1;
-                    letter-spacing: 1.13px;
-                    line-height: 70px;
-                    margin: 17px 0;
-                    font-weight: 400;
-                }
-                p{
-                    font-size: $body-1;
-                    line-height: 26px;
+                &:nth-child(2){
+                    display: none;
                 }
             }
         }
+        .header-content{
+            margin: 0 auto;
+            h1{
+                font-size: $font-h1;
+                letter-spacing: 1.13px;
+                line-height: 70px;
+                margin: 17px 0;
+                font-weight: 400;
+            }
+            p{
+                font-size: $body-1;
+                line-height: 26px;
+            }
+        }
         main{
-            display: flex;
-            justify-content: center;
-            .about-business{
-                width: 500px;
-                margin-right: 10px;
-                span {
-                    width: 170px;
-                    height: 150px;
-                    p{
-                        font-size: 64px;
-                        top: 60%;
-                        left: 105px;
+                .container{
+                display: flex;
+                justify-content: center;
+                .about-business{
+                    width: 500px;
+                    margin-right: 10px;
+                    span {
+                        width: 170px;
+                        height: 150px;
+                        p{
+                            font-size: 64px;
+                            top: 60%;
+                            left: 105px;
+                        }
                     }
-                }
-                h3{
-                    font-size: 64px;
-                    margin: 0 0 50px 60px;
-                }
-                strong, p:nth-child(4) {
-                    margin-left: 70px;
-                    font-size: $body-1;
-                    width: 400px;
-                }
+                    h2{
+                        font-size: 64px;
+                        margin: 0 0 50px 60px;
+                    }
+                    strong, p:nth-child(4) {
+                        margin-left: 70px;
+                        font-size: $body-1;
+                        width: 400px;
+                    }
 
-                p:nth-child(4) {
-                    margin-bottom: 95px;
-                }
+                    p:nth-child(4) {
+                        margin-bottom: 95px;
+                    }
 
-                .buttons{
-                    button{
-                        &:nth-child(2){
-                            position: relative;
-                            &::after{
-                                content: "R$ 5.000,00";
-                                position: absolute;
-                                top: -50%;
-                                left: 0%;
-                                color: $gray-200;
+                    .buttons{
+                        button{
+                            &:nth-child(2){
+                                position: relative;
+                                &::after{
+                                    content: "R$ 5.000,00";
+                                    position: absolute;
+                                    top: -50%;
+                                    left: 0%;
+                                    color: $gray-200;
+                                }
                             }
                         }
                     }
                 }
-            }
-            .about-cards {
-                width: 600px;
-                display: flex;
-                flex-wrap: wrap;
-                margin: 80px 0 0;
-                align-items: center;
-                .card{
-                    width: 40%;
-                    margin: 10px 20px;
+                .about-cards {
+                    width: 600px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 80px 0 0;
+                    align-items: center;
+                    .card{
+                        width: 40%;
+                        margin: 10px 20px;
+                    }
                 }
             }
         }
-        article{
+        .course-price{
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 22px 0;
+            margin:0;
             .text-about {
                 margin: 0;
                 width: 60%;
@@ -122,43 +122,51 @@
             }
             .accordion{
                 display: flex;
-                justify-content: center;
                 .competences{
-                    width: 30%;
-                    .competence{
+                    display: none;
+                }
+                #competences-desktop {
+                    display: flex;
+                    flex-direction: column;
+                    input[type='radio']{
+                        display: none;
+                    }
+                    label {
+                        cursor: pointer;
+                        background: $gray-500;
+                        color: $white;
+                        align-items: center;
                         display: flex;
-                        header{
-                            width: 100%;
-                            justify-content: center;
-                            img{
-                                display: none;
-                            }
-                            p{
-                                font-size: $font-h3;
-                            }
-                        }
-                        .about-competence{
-                            display: none;
+                        justify-content: space-between;
+                        padding: 20px 15px;
+                        height: 80px;
+                        width: 400px;
+                        font-size: $font-h3;
+                        letter-spacing: 0.67px;
+                        font-weight: 200;
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                            filter: brightness(0.8);
                         }
                     }
-                    .opened{
-                        header{
-                            position: relative;
-                            p{
-                                font-weight: 500;
-                            } 
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                width: 75%;
-                                height: 2px;
-                                background: $orange;
-                                bottom: 0;
-                                right: 0;
-                            }
+                    .checked{
+                        position: relative;
+                        width: 100%;
+                        font-weight: 500;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 75%;
+                            height: 2px;
+                            background: $orange;
+                            right: 0;
+                            bottom:0;
                         }
                     }
                 }
+                  
                 .about-competence-desktop{
                     width: 50%;
                     background: #262626;

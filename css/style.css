@@ -29,7 +29,7 @@
   border-radius: 5px;
   padding: 15px 0;
 }
-.modal-cadastro .modal header {
+.modal-cadastro .modal .header-modal {
   background: none;
   height: 20%;
   display: flex;
@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
 }
-.modal-cadastro .modal header button {
+.modal-cadastro .modal .header-modal button {
   align-self: flex-end;
   color: #686868;
   background: none;
@@ -45,12 +45,12 @@
   font-size: 24px;
   margin: 0 15px;
 }
-.modal-cadastro .modal header h3 {
+.modal-cadastro .modal .header-modal h3 {
   font-size: 32px;
   color: #F89D24;
   font-weight: 500;
 }
-.modal-cadastro .modal header p {
+.modal-cadastro .modal .header-modal p {
   text-align: center;
   color: #B5B5B5;
   font-size: 13.5px;
@@ -199,34 +199,33 @@ button:hover {
 
 body {
   background: #2c2c2c;
-  background: radial-gradient(circle, #2c2c2c 0%, #2c2c2c 0%, #1a1a1a 100%);
+  background: radial-gradient(closest-side at 100% 50%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+  background: transparent radial-gradient(#2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
+  background-attachment: fixed;
   font-family: "Yantramanav", sans-serif;
 }
 body header {
-  background: transparent radial-gradient(closest-side at 96% 11%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
-  height: 100vh;
-}
-body header .menu {
+  height: 10vh;
   padding: 10px 10px 0;
 }
-body header .menu img:nth-child(1) {
+body header img:nth-child(1) {
   width: 115px;
   height: 95px;
   display: none;
 }
-body header .menu img:nth-child(2) {
+body header img:nth-child(2) {
   display: block;
 }
-body header .header-content {
+body .header-content {
   margin: 20px auto;
   max-width: 900px;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 90%;
 }
-body header .header-content h1 {
+body .header-content h1 {
   color: #FFFFFF;
   font-weight: 300;
   text-align: center;
@@ -236,13 +235,17 @@ body header .header-content h1 {
   font-weight: 500;
   margin-bottom: 10px;
 }
-body header .header-content p {
+body .header-content p {
   color: #B5B5B5;
   font-size: 13.5px;
   line-height: 26px;
   text-align: center;
   margin: 5px auto 40px;
   width: 90%;
+}
+body main {
+  background: #2c2c2c;
+  background: radial-gradient(closest-side at 100% 50%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
 }
 body main span {
   border: 1px solid #F89D24;
@@ -259,14 +262,17 @@ body main span p {
   left: 50%;
   transform: translate(-50%, 0);
 }
-body main h3, body main span p {
+body main h2, body main span p {
   font-size: 46px;
   color: #FFFFFF;
   font-weight: 500;
   line-height: 45px;
 }
-body main h3, body main p {
+body main p {
   margin-left: 15px;
+}
+body main h2 {
+  margin-left: 25px;
 }
 body main strong {
   color: #B5B5B5;
@@ -294,35 +300,36 @@ body main .about-cards .card {
 body main .about-cards .card img {
   margin: 15px 0 25px;
 }
-body main .about-cards .card h4 {
+body main .about-cards .card h3 {
   color: #F89D24;
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 7px;
+  margin-left: 15px;
 }
 body main .about-cards .card p {
   color: #B5B5B5;
   font-weight: 500;
   line-height: 26px;
 }
-body article {
+body .course-price {
   background: url("../assets/img/group34.svg");
   backdrop-filter: opacity(0.1);
   width: 100%;
   padding: 44px 0 0;
   margin: 56px 0 0;
 }
-body article h3, body article p {
+body .course-price h3, body .course-price p {
   font-size: 40.5px;
   text-align: center;
   padding: 0 15px;
   color: #FFFFFF;
   font-weight: 500;
 }
-body article p {
+body .course-price p {
   margin: 0 0 44px;
 }
-body article .curso-value {
+body .course-price .curso-value {
   background: #F89D24;
   padding: 45px 0 0;
   display: flex;
@@ -330,7 +337,7 @@ body article .curso-value {
   align-items: center;
   justify-content: center;
 }
-body article .curso-value h2 {
+body .course-price .curso-value h2 {
   margin: 0 0 24px;
   font-size: 48px;
   color: #FFFFFF;
@@ -338,7 +345,7 @@ body article .curso-value h2 {
   line-height: 62px;
   letter-spacing: 1.01px;
 }
-body article .curso-value button {
+body .course-price .curso-value button {
   background: #FFFFFF;
   color: #F89D24;
   border-radius: 5px;
@@ -372,10 +379,13 @@ body .about-studies h3 span {
 body .about-studies .accordion {
   margin: 35px 0;
 }
+body .about-studies .accordion #competences-desktop {
+  display: none;
+}
 body .about-studies .accordion .competence {
   cursor: pointer;
 }
-body .about-studies .accordion .competence header {
+body .about-studies .accordion .competence section {
   background: #686868;
   align-items: center;
   display: flex;
@@ -383,12 +393,12 @@ body .about-studies .accordion .competence header {
   padding: 20px 15px;
   height: 80px;
 }
-body .about-studies .accordion .competence header p {
+body .about-studies .accordion .competence section p {
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 100;
 }
-body .about-studies .accordion .competence header img {
+body .about-studies .accordion .competence section img {
   width: 20px;
   height: 20px;
 }
@@ -571,7 +581,7 @@ body .depoimentos .depoimento .about-depoiment p span {
 }
 body .learn {
   background: #2c2c2c;
-  background: radial-gradient(circle, #2c2c2c 0%, #2c2c2c 0%, #1a1a1a 100%);
+  background: radial-gradient(closest-side at 100% 50%, #2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;
   padding-bottom: 56px;
 }
 body .learn .learn-capacity .about-capacity h3, body .learn .learn-capacity .about-capacity span p {
