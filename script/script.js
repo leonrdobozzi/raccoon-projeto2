@@ -105,17 +105,17 @@ const competenceDesktop = document.querySelectorAll('input[name="competence"]');
 competenceDesktop.forEach(input => {
   input.addEventListener('click', () => {
     document.querySelectorAll('label').forEach(label => {
-      if(label.classList == input.id){
-        label.classList.add('checked')
         const text = document.querySelector('.about-text');
+    if(label.classList == input.id){
+        label.classList.add('checked')
         if(label.classList.contains('competence-1')){
-          text.innerText = 'Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso.';
+            text.innerText = 'Esta seção visa explicar as competências que os alunos possuirão uma vez que concluírem o curso.';
         }else if(label.classList.contains('competence-2')){
-          text.innerText = 'Esta seção visa explicar as competências para se fazer o curso.';
+            text.innerText = 'Esta seção visa explicar as competências para se fazer o curso.';
         }else if(label.classList.contains('competence-3')){
-          text.innerText = 'Esta seção visa explicar as competências da empresa com o curso.';
+            text.innerText = 'Esta seção visa explicar as competências da empresa com o curso.';
         }else if(label.classList.contains('competence-4')){
-          text.innerText = 'Esta seção visa explicar as competências com o mercado de trabalho.';
+            text.innerText = 'Esta seção visa explicar as competências com o mercado de trabalho.';
         }
       }else{
         label.classList.remove('checked')
