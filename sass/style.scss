@@ -301,6 +301,7 @@ body{
     .depoimentos{
         height: 100vh;
         position: relative;
+        background: #0C0C0C;
         .slick-prev, .slick-next{
             visibility: hidden;
         }
@@ -363,7 +364,7 @@ body{
             background : {
                 repeat: no-repeat;
                 size: cover;
-                position: center;
+                position: top;
             }
             display: flex;
             align-items: center;
@@ -420,6 +421,7 @@ body{
                     height: 105px;
                     position: relative;
                     display: block;
+                    margin-top: 20px;
                     p{
                         position: absolute;
                         top: 40%;
