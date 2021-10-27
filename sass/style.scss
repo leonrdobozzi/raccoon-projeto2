@@ -3,6 +3,8 @@
 @import 'modal';
 @import 'global';
 
+//Comando para funcionar o SASS MINIFICADO - sass --watch sass:dist/css --style compressed
+
 body{
     @include bg-gradient;
     background: transparent radial-gradient(#2C2C2C 0%, #1A1A1A 100%) 0% 0% no-repeat padding-box;

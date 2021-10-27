@@ -83,10 +83,8 @@ competences.forEach(competenceContainer => {
                 arrowCompetence.forEach(arrow => {
                     if(arrow.parentNode.parentElement.classList.contains('opened')){
                         arrow.style.transform = 'rotate(180deg)';
-                    }else{
-                        
                     }
-                });
+                })
             }else if(!competence.parentElement.classList.contains('opened')){
                 competence.classList.remove('about-display');
                 arrowCompetence.forEach(arrow => {
@@ -120,7 +118,7 @@ competenceDesktop.forEach(input => {
       }else{
         label.classList.remove('checked')
       }
-    })
-  })
+    });
+  });
 })
 
